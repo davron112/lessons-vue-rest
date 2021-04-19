@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="Salom mening SPA ilovam"/>
   </div>
 </template>
 
@@ -12,6 +12,29 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  data() {
+    return {
+      darslar: ['Git', 'Vue', 'Laravel', 'PHP']
+    }
+  },
+  created() {
+    this.darslarniOlish()
+  },
+  methods: {
+    darslarniOlish () {
+      //
+    }
+  },
+  computed: {
+    onlaynStudentlar() {
+      return ['Anvar', 'Abror']
+    }
+  },
+  watch: {
+    dars() {
+      //alert("Yangi dars qo\'shildi");
+    }
   }
 }
 </script>
